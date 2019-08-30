@@ -46,8 +46,6 @@ normalizeOptions = (queryOptions) ->
     throw errors.RetsProcessingError('search', 'searchType is required (ex: Property')
   if !queryOptions.class
     throw errors.RetsProcessingError('search', 'class is required (ex: RESI)')
-  if !queryOptions.query
-    throw errors.RetsProcessingError('search', 'query is required (ex: (MatrixModifiedDT=2014-01-01T00:00:00.000+) )')
   remapKeys(mergeOptions(queryOptions, _queryOptionsDefaults))
 
 
